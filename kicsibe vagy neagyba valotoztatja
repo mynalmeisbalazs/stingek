@@ -20,3 +20,40 @@ int main()
     cout << s << endl;
     return 0;
 }
+
+
+vagy 
+
+
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    string s, milyen;
+    cout <<"kerem a szot";
+    cin>> s;
+    cout << "k/n";
+    cin >> milyen;
+    int pos= 'a'-'A';
+    for(int i=0; i<s.size(); i++)
+    {
+        if(milyen == "n")
+        {
+            if(s[i]>='a')
+            {
+                s[i] -=pos;
+            }
+        }
+        if(milyen == "k")
+        {
+            if(s[i] <= 'Z')
+            {
+                s[i] += pos;
+            }
+        }
+    }
+    cout << s << endl;
+    return 0;
+}
